@@ -1,0 +1,117 @@
+/* App.css */
+@font-face {
+  font-family: 'Pixelify Sans';
+  src: url('../public/fonts/PixelifySans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+/* Yleiset asettelut */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+  min-height: 100vh;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #333;
+}
+
+/* Kuvan responsiivisuus */
+.frog-image {
+  width: 100%;
+  max-width: 300px; /* Kuva ei kasva yli 300px:n */
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Input ja nappi */
+.input-area {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  color: #8A8A8A;
+}
+
+.input-area input {
+  padding: 0.5rem;
+  font-size: 2rem;
+  font-family: 'Pixelify Sans', sans-serif;
+  border: none;
+  outline: thin dashed;
+  color: #8A8A8A;
+  flex: 1;
+}
+
+.input-area button {
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  font-family: 'Pixelify Sans', sans-serif;
+  background-color: #7D9F5C;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.input-area button:hover {
+  background-color: #4f643a;
+}
+
+/* Säätietojen osio */
+.weather-info {
+  padding: 2rem;
+  border-radius: 8px;
+  color: #333;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.weather-info p {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+}
+
+/* Media queryt pienemmille näytöille */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .input-area input,
+  .input-area button,
+  .weather-info p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .input-area {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .input-area input,
+  .input-area button,
+  .weather-info p {
+    font-size: 1.6rem;
+  }
+}
